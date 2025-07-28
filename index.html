@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ミニシューティングゲーム</title>
+    <title>派手なシューティングゲーム</title>
     <style>
         * {
             margin: 0;
@@ -24,11 +24,13 @@
         
         #gameCanvas {
             display: block;
-            margin: 20px auto 0;
+            margin: 10px auto 0;
             border: 3px solid #ff6b6b;
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
             background: linear-gradient(180deg, #000011, #001122);
+            max-width: 95vw;
+            max-height: 85vh;
         }
         
         #ui {
@@ -107,7 +109,7 @@
         <div id="instructions">
             <p>🎯 1ぷんかんでどれだけてんすうをかせげるかな？</p>
             <p>⬅️➡️ やじるしキーでいどう（ブラウザのやじるしボタンもOK）</p>
-            <p>たまは じどうで うちつづけます！</p>
+            <p>だんは じどうで うちつづけます！</p>
             <p>⭐ ボーナスアイテムをゲット！</p>
             <p>⚡ パワーアイテムでだんがパワーアップ！</p>
         </div>
@@ -126,7 +128,7 @@
         <p>さいしゅうスコア: <span id="finalScore">0</span></p>
     </div>
     
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <canvas id="gameCanvas" width="1200" height="800"></canvas>
     
     <script>
         const canvas = document.getElementById('gameCanvas');
@@ -138,7 +140,7 @@
             lives: 3,
             timer: 60,
             powerLevel: 0,
-            player: { x: 400, y: 500, width: 40, height: 40, speed: 8 },
+            player: { x: 600, y: 700, width: 40, height: 40, speed: 8 },
             bullets: [],
             enemies: [],
             particles: [],
